@@ -56,7 +56,7 @@ final class TelegramTest extends TestCase
     public function testMinimalTxt()
     {
         $this->expectException(\GreenSMS\Http\RestException::class);
-        $this->utility->getInstance()->sms->send([
+        $this->utility->getInstance()->telegram->send([
             'to' => '01234567891',
             'txt' => str_repeat('s',3),
         ]);
@@ -65,7 +65,7 @@ final class TelegramTest extends TestCase
     public function testMaximalTxt()
     {
         $this->expectException(\GreenSMS\Http\RestException::class);
-        $this->utility->getInstance()->sms->send([
+        $this->utility->getInstance()->telegram->send([
             'to' => '01234567891',
             'txt' => str_repeat('s',9),
         ]);
