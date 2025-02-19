@@ -172,6 +172,14 @@ class Schema
               ],
             ]
           ]),
+          'telegram' => array_merge_recursive($commonSchema, [
+            'v1' => [
+              'send' => [
+                'txt' => ['required', ['lengthMin', 4],['lengthMax', 8]],
+                'tag' => [['lengthMax', 36]],
+              ],
+            ]
+          ]),
         ];
 
         return $schema;
