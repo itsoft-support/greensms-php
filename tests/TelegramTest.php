@@ -28,7 +28,7 @@ final class TelegramTest extends TestCase
     {
         try {
             $response = $this->utility->getInstance()->telegram->send([]);
-            $this->fail("Shouldn't send Viber without parameters");
+            $this->fail("Shouldn't send Telegram without parameters");
         } catch (Exception $e) {
             $this->assertObjectHasAttribute('message', $e);
             $this->assertEquals('Validation Error', $e->getMessage());
